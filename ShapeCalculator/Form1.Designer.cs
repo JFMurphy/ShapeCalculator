@@ -98,14 +98,14 @@
             // 
             this.shapesPanel.Controls.Add(this.shapesLabel);
             this.shapesPanel.Controls.Add(this.radioButttonPanel);
-            this.shapesPanel.Location = new System.Drawing.Point(12, 58);
+            this.shapesPanel.Location = new System.Drawing.Point(305, 12);
             this.shapesPanel.Name = "shapesPanel";
             this.shapesPanel.Size = new System.Drawing.Size(109, 184);
             this.shapesPanel.TabIndex = 2;
             // 
             // dimensionSlider
             // 
-            this.dimensionSlider.Location = new System.Drawing.Point(12, 296);
+            this.dimensionSlider.Location = new System.Drawing.Point(194, 288);
             this.dimensionSlider.Name = "dimensionSlider";
             this.dimensionSlider.Size = new System.Drawing.Size(220, 45);
             this.dimensionSlider.TabIndex = 3;
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 432);
+            this.ClientSize = new System.Drawing.Size(517, 429);
             this.Controls.Add(this.dimensionSlider);
             this.Controls.Add(this.shapesPanel);
             this.Name = "Form1";

@@ -15,3 +15,6 @@ C:\Users\John Francis\Google Drive\Visual Basic Projects\ShapeCalculator\ShapeCa
 C:\Users\John Francis\Google Drive\Visual Basic Projects\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Form1.resources
 C:\Users\John Francis\Google Drive\Visual Basic Projects\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Properties.Resources.resources
 C:\Users\John Francis\Google Drive\Visual Basic Projects\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.csproj.GenerateResource.Cache
+P:\GitHub\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.exe.config
+P:\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.exe
+P:\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.pdb
