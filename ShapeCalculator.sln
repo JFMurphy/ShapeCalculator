@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeCalculator", "ShapeCalculator\ShapeCalculator.csproj", "{44543096-50D2-4F72-A562-9153B3B4D962}"
 EndProject
 Global
