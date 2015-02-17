@@ -27,3 +27,9 @@ C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator\ShapeCalculator\obj\Deb
 C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Form1.resources
 C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Properties.Resources.resources
 C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.csproj.GenerateResource.Cache
+P:\GitHub\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.exe
+P:\GitHub\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.pdb
+P:\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.csprojResolveAssemblyReference.cache
+P:\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Form1.resources
+P:\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Properties.Resources.resources
+P:\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.csproj.GenerateResource.Cache
