@@ -33,3 +33,12 @@ P:\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.csprojResolv
 P:\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Form1.resources
 P:\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Properties.Resources.resources
 P:\GitHub\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.csproj.GenerateResource.Cache
+C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\bin\Debug\ShapeCalculator.exe.config
+C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\bin\Debug\ShapeCalculator.exe
+C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\bin\Debug\ShapeCalculator.pdb
+C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\obj\Debug\ShapeCalculator.Form1.resources
+C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\obj\Debug\ShapeCalculator.Properties.Resources.resources
+C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\obj\Debug\ShapeCalculator.csproj.GenerateResource.Cache
+C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\obj\Debug\ShapeCalculator.exe
+C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\obj\Debug\ShapeCalculator.pdb
+C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\obj\Debug\ShapeCalculator.csprojResolveAssemblyReference.cache

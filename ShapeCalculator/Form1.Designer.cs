@@ -172,20 +172,23 @@
             // toolStripMenuItemSquare
             // 
             this.toolStripMenuItemSquare.Name = "toolStripMenuItemSquare";
-            this.toolStripMenuItemSquare.Size = new System.Drawing.Size(117, 22);
+            this.toolStripMenuItemSquare.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemSquare.Text = "Square";
+            this.toolStripMenuItemSquare.Click += new System.EventHandler(this.toolStripMenuItemSquare_Click);
             // 
             // toolStripMenuItemCircle
             // 
             this.toolStripMenuItemCircle.Name = "toolStripMenuItemCircle";
-            this.toolStripMenuItemCircle.Size = new System.Drawing.Size(117, 22);
+            this.toolStripMenuItemCircle.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemCircle.Text = "Circle";
+            this.toolStripMenuItemCircle.Click += new System.EventHandler(this.toolStripMenuItemCircle_Click);
             // 
             // toolStripMenuItemTriangle
             // 
             this.toolStripMenuItemTriangle.Name = "toolStripMenuItemTriangle";
-            this.toolStripMenuItemTriangle.Size = new System.Drawing.Size(117, 22);
+            this.toolStripMenuItemTriangle.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemTriangle.Text = "Triangle";
+            this.toolStripMenuItemTriangle.Click += new System.EventHandler(this.toolStripMenuItemTriangle_Click);
             // 
             // toolStripMenuItemAbout
             // 
