@@ -42,3 +42,12 @@ C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\
 C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\obj\Debug\ShapeCalculator.exe
 C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\obj\Debug\ShapeCalculator.pdb
 C:\Users\JohnFrancis\Google Drive\GitHub\ShapeCalculator-master\ShapeCalculator\obj\Debug\ShapeCalculator.csprojResolveAssemblyReference.cache
+G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.exe.config
+G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.exe
+G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.csprojResolveAssemblyReference.cache
+G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Form1.resources
+G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Properties.Resources.resources
+G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.csproj.GenerateResource.Cache
+G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.exe
+G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.pdb
+G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.pdb

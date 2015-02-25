@@ -172,21 +172,21 @@
             // toolStripMenuItemSquare
             // 
             this.toolStripMenuItemSquare.Name = "toolStripMenuItemSquare";
-            this.toolStripMenuItemSquare.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemSquare.Size = new System.Drawing.Size(117, 22);
             this.toolStripMenuItemSquare.Text = "Square";
             this.toolStripMenuItemSquare.Click += new System.EventHandler(this.toolStripMenuItemSquare_Click);
             // 
             // toolStripMenuItemCircle
             // 
             this.toolStripMenuItemCircle.Name = "toolStripMenuItemCircle";
-            this.toolStripMenuItemCircle.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemCircle.Size = new System.Drawing.Size(117, 22);
             this.toolStripMenuItemCircle.Text = "Circle";
             this.toolStripMenuItemCircle.Click += new System.EventHandler(this.toolStripMenuItemCircle_Click);
             // 
             // toolStripMenuItemTriangle
             // 
             this.toolStripMenuItemTriangle.Name = "toolStripMenuItemTriangle";
-            this.toolStripMenuItemTriangle.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemTriangle.Size = new System.Drawing.Size(117, 22);
             this.toolStripMenuItemTriangle.Text = "Triangle";
             this.toolStripMenuItemTriangle.Click += new System.EventHandler(this.toolStripMenuItemTriangle_Click);
             // 
@@ -234,6 +234,7 @@
             this.radioButton4Decimal.TabIndex = 2;
             this.radioButton4Decimal.Text = "4 Places";
             this.radioButton4Decimal.UseVisualStyleBackColor = true;
+            this.radioButton4Decimal.CheckedChanged += new System.EventHandler(this.radioButton4Decimal_CheckedChanged);
             // 
             // radioButton3Decimal
             // 
@@ -244,6 +245,7 @@
             this.radioButton3Decimal.TabIndex = 1;
             this.radioButton3Decimal.Text = "3 Places";
             this.radioButton3Decimal.UseVisualStyleBackColor = true;
+            this.radioButton3Decimal.CheckedChanged += new System.EventHandler(this.radioButton3Decimal_CheckedChanged);
             // 
             // radioButton2Decimal
             // 
@@ -256,6 +258,8 @@
             this.radioButton2Decimal.TabStop = true;
             this.radioButton2Decimal.Text = "2 Places";
             this.radioButton2Decimal.UseVisualStyleBackColor = true;
+            this.radioButton2Decimal.CheckedChanged += new System.EventHandler(this.radioButton2Decimal_CheckedChanged);
+            this.radioButton2Decimal.Enter += new System.EventHandler(this.radioButton2Decimal_Enter);
             // 
             // LabelDecimalPlaces
             // 
