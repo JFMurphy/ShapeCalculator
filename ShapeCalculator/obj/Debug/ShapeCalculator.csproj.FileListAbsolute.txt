@@ -51,3 +51,12 @@ G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculato
 G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.exe
 G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.pdb
 G:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.pdb
+F:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.exe.config
+F:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.exe
+F:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.pdb
+F:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.exe
+F:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\bin\Debug\ShapeCalculator.pdb
+F:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.csprojResolveAssemblyReference.cache
+F:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Form1.resources
+F:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.Properties.Resources.resources
+F:\Uni Stuff\Year 2\COM377 Programming 3\Assignments\Assignment 1\ShapeCalculator\ShapeCalculator\obj\Debug\ShapeCalculator.csproj.GenerateResource.Cache

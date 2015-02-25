@@ -12,12 +12,9 @@ namespace ShapeCalculator
 {
     public partial class Form1 : Form
     {
-        int rectWidth;
-        int rectHeight;
-        int circleWidth;
-        int circleHeight;
-        int triangleWidth;
-        int triangleHeight;
+        int squareDimension;
+        int circleDimension;
+        int triangleDimension;
 
         int decimalPlaces;
 
@@ -29,12 +26,12 @@ namespace ShapeCalculator
         public Form1()
         {
             InitializeComponent();
-            rectHeight = sliderDimension.Value * 2;
-            rectWidth = sliderDimension.Value * 2;
-            circleHeight = sliderDimension.Value * 2;
-            circleWidth = sliderDimension.Value * 2;
-            triangleHeight = sliderDimension.Value * 2;
-            triangleWidth = sliderDimension.Value * 2;
+            rectHeight = sliderDimension.Value;
+            squareDimension = sliderDimension.Value;
+            circleHeight = sliderDimension.Value;
+            circleDimension = sliderDimension.Value;
+            triangleHeight = sliderDimension.Value;
+            triangleDimension = sliderDimension.Value;
         }
 
 
@@ -44,7 +41,7 @@ namespace ShapeCalculator
         {
             setSquareDimensions();
             panelDrawingArea.Invalidate();
-            setTextBoxValues("Square");
+            setTextBoxValues(1);
         }
 
         // 
@@ -123,21 +120,21 @@ namespace ShapeCalculator
             if (radioButtonSquare.Checked)
             {
                 setSquareDimensions();
-                setTextBoxValues("Square");
+                setTextBoxValues(1);
                 panelDrawingArea.Invalidate();
             }
 
             if (radioButtonCircle.Checked)
             {
                 setCircleDimensions();
-                setTextBoxValues("Circle");
+                setTextBoxValues(2);
                 panelDrawingArea.Invalidate();
             }
 
             if (radioButtonTriangle.Checked)
             {
                 setTriangleDimensions();
-                setTextBoxValues("Triangle");
+                setTextBoxValues(3);
                 panelDrawingArea.Invalidate();
             }
 
@@ -153,11 +150,11 @@ namespace ShapeCalculator
 
             if (radioButtonSquare.Checked)
             {
-                g.DrawRectangle(blackPen, xOrigin, yOrigin, rectWidth, rectHeight);
+                g.DrawRectangle(blackPen, xOrigin, yOrigin, squareDimension, squareDimension);
             }
             else if (radioButtonCircle.Checked)
             {
-                g.DrawEllipse(blackPen, xOrigin, yOrigin, circleWidth, circleHeight);
+                g.DrawEllipse(blackPen, xOrigin, yOrigin, circleDimension, circleDimension);
             }
             else if (radioButtonTriangle.Checked)
             {
@@ -180,119 +177,54 @@ namespace ShapeCalculator
         // Sets the square size variables to 2 times the current value of the slider value.
         private void setSquareDimensions()
         {
-            rectHeight = sliderDimension.Value * 2;
-            rectWidth = sliderDimension.Value * 2;
+            squareDimension = sliderDimension.Value;
         }
 
         // Sets the square size variables to 2 times the current value of the slider value.
         private void setCircleDimensions()
         {
-            circleHeight = sliderDimension.Value * 2;
-            circleWidth = sliderDimension.Value * 2;
+            circleDimension = sliderDimension.Value;
         }
 
         // Sets the square size variables to 2 times the current value of the slider value.
         private void setTriangleDimensions()
         {
-            triangleHeight = sliderDimension.Value * 2;
-            triangleWidth = sliderDimension.Value * 2;
+            triangleDimension = sliderDimension.Value;
         }
 
         // Creates points that will be used in order to create the triangle shape.
         private Point[] trianglePoints()
         {
             Point point1 = new Point(xOrigin, yOrigin);
-            Point point2 = new Point(xOrigin, yOrigin + triangleHeight);
-            Point point3 = new Point(xOrigin + triangleWidth, yOrigin + triangleHeight);
+            Point point2 = new Point(xOrigin, yOrigin + triangleDimension);
+            Point point3 = new Point(xOrigin + triangleDimension, yOrigin + triangleDimension);
             Point[] trianglePoints = { point1, point2, point3 };
 
             return trianglePoints;
         }
 
-        // Performs the calculation to find the boundary of the square.
-        private string squareBoundaryResult()
-        {
-            double boundary;
-            string result;
-            boundary = rectWidth * 2;
-            result = setDecimalPlace(boundary);
-
-            return result;
-        }
-
-        // Performs the calculation to find the area of the square.
-        private string squareAreaResult()
-        {
-            double area;
-            string result;
-            area = rectHeight * rectWidth;
-            result = setDecimalPlace(area);
-
-            return result;
-        }
-
-        // Performs the calculation to find the boundary of the circle.
-        private string circleBoundaryResult()
-        {
-            double boundary;
-            string result;
-            boundary = Math.PI * circleWidth;
-            result = setDecimalPlace(boundary);
-
-            return result;
-        }
-
-        // Performs the calculation to find the area of the circle.
-        private string circleAreaResult()
-        {
-            double area;
-            string result;
-            area = Math.PI * Math.Pow((circleHeight / 2), 2);
-            result = setDecimalPlace(area);
-            return result;
-        }
-
-        // Performs the calculation to find the boundary of the triangle.
-        private string triangleBoundaryResult()
-        {
-            double boundary;
-            string result;
-            boundary = (2 * triangleHeight) + (Math.Sqrt(2 * triangleHeight * triangleWidth));
-            result = setDecimalPlace(boundary);
-            return result;
-        }
-
-        // Performs the calculation to find the area of the triangle.
-        private string triangleAreaResult()
-        {
-            double area;
-            string result;
-            area = triangleWidth / 2 * triangleHeight;
-            result = setDecimalPlace(area);
-            return result;
-        }
-
         // Updates the contents of the boundary and area text boxes based on the string passed in
         // through the parameter list.
-        private void setTextBoxValues(String s)
+        private void setTextBoxValues(int i)
         {
-            if (s == "Square")
+            if (i == 1)
             {
                 textBoxBoundaryResult.Text = squareBoundaryResult();
                 textBoxAreaResult.Text = squareAreaResult();
             }
-            else if (s == "Circle")
+            else if (i == 2)
             {
                 textBoxBoundaryResult.Text = circleBoundaryResult();
                 textBoxAreaResult.Text = circleAreaResult();
             }
-            else if (s == "Triangle")
+            else if (i == 3)
             {
                 textBoxBoundaryResult.Text = triangleBoundaryResult();
                 textBoxAreaResult.Text = triangleAreaResult();
             }
         }
 
+        
         // Returns the value passed in through the parameter as a string formmatted to the
         // appropriate decimal place.
         private string setDecimalPlace(double d)
@@ -315,6 +247,71 @@ namespace ShapeCalculator
 
             return stringValue;
         }
+
+        /*
+        // Performs the calculation to find the boundary of the square.
+        private string squareBoundaryResult()
+        {
+            double boundary;
+            string result;
+            boundary = squareDimension * 2;
+            result = setDecimalPlace(boundary);
+
+            return result;
+        }
+
+        // Performs the calculation to find the area of the square.
+        private string squareAreaResult()
+        {
+            double area;
+            string result;
+            area = squareDimension * squareDimension;
+            result = setDecimalPlace(area);
+
+            return result;
+        }
+
+        // Performs the calculation to find the boundary of the circle.
+        private string circleBoundaryResult()
+        {
+            double boundary;
+            string result;
+            boundary = Math.PI * circleDimension;
+            result = setDecimalPlace(boundary);
+
+            return result;
+        }
+
+        // Performs the calculation to find the area of the circle.
+        private string circleAreaResult()
+        {
+            double area;
+            string result;
+            area = Math.PI * Math.Pow((circleHeight / 2), 2);
+            result = setDecimalPlace(area);
+            return result;
+        }
+
+        // Performs the calculation to find the boundary of the triangle.
+        private string triangleBoundaryResult()
+        {
+            double boundary;
+            string result;
+            boundary = (2 * triangleHeight) + (Math.Sqrt(2 * triangleHeight * triangleDimension));
+            result = setDecimalPlace(boundary);
+            return result;
+        }
+
+        // Performs the calculation to find the area of the triangle.
+        private string triangleAreaResult()
+        {
+            double area;
+            string result;
+            area = triangleDimension / 2 * triangleHeight;
+            result = setDecimalPlace(area);
+            return result;
+        }
+         * */
 
         
     }
