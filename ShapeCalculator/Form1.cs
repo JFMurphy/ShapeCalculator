@@ -12,9 +12,8 @@ namespace ShapeCalculator
 {
     public partial class Form1 : Form
     {
-        int squareDimension;
-        int circleDimension;
-        int triangleDimension;
+        int shapeDimension;
+        int drawDimension;
 
         int decimalPlaces;
 
@@ -22,16 +21,13 @@ namespace ShapeCalculator
         int xOrigin = 5;
         int yOrigin = 5;
 
+        Shape myShape = null;
 
         public Form1()
         {
             InitializeComponent();
-            rectHeight = sliderDimension.Value;
-            squareDimension = sliderDimension.Value;
-            circleHeight = sliderDimension.Value;
-            circleDimension = sliderDimension.Value;
-            triangleHeight = sliderDimension.Value;
-            triangleDimension = sliderDimension.Value;
+            shapeDimension = sliderDimension.Value;
+            drawDimension = sliderDimension.Value * 2;
         }
 
 
@@ -39,51 +35,60 @@ namespace ShapeCalculator
         // is first opened, as the square is the default selection.
         private void radioButtonSquare_Enter(object sender, EventArgs e)
         {
-            setSquareDimensions();
-            panelDrawingArea.Invalidate();
-            setTextBoxValues(1);
-        }
-
-        // 
-        private void radioButton2Decimal_Enter(object sender, EventArgs e)
-        {
+            myShape = new Square();
             decimalPlaces = 1;
+            setShapeDimensions();
+            setDrawDimensions();
+            panelDrawingArea.Invalidate();
+            setTextBoxValues();
         }
 
         // Redraws the drawing area when the square radio button is changed.
         private void radioButtonSquare_CheckedChanged(object sender, EventArgs e)
         {
-            setSquareDimensions();
+            myShape = new Square();
+            setShapeDimensions();
+            setDrawDimensions();
+            setTextBoxValues();
             panelDrawingArea.Invalidate();
         }
 
         // Redraws the drawing area when the circle radio button is changed.
         private void radioButtonCircle_CheckedChanged(object sender, EventArgs e)
         {
-            setCircleDimensions();
+            myShape = new Circle();
+            setShapeDimensions();
+            setDrawDimensions();
+            setTextBoxValues();
             panelDrawingArea.Invalidate();
         }
 
         // Redraws the drawing area when the triangle radio button is changed.
         private void radioButtonTriangle_CheckedChanged(object sender, EventArgs e)
         {
-            setTriangleDimensions();
+            myShape = new Triangle();
+            setShapeDimensions();
+            setDrawDimensions();
+            setTextBoxValues();
             panelDrawingArea.Invalidate();
         }
 
         private void radioButton2Decimal_CheckedChanged(object sender, EventArgs e)
         {
             decimalPlaces = 1;
+            setTextBoxValues();
         }
 
         private void radioButton3Decimal_CheckedChanged(object sender, EventArgs e)
         {
             decimalPlaces = 2;
+            setTextBoxValues();
         }
 
         private void radioButton4Decimal_CheckedChanged(object sender, EventArgs e)
         {
             decimalPlaces = 3;
+            setTextBoxValues();
         }
 
         // Redraws the drawing area when the square menu option is clicked, it also checks the
@@ -91,7 +96,7 @@ namespace ShapeCalculator
         private void toolStripMenuItemSquare_Click(object sender, EventArgs e)
         {
             radioButtonSquare.Checked = true;
-            setSquareDimensions();
+            setShapeDimensions();
             panelDrawingArea.Invalidate();
         }
 
@@ -100,7 +105,7 @@ namespace ShapeCalculator
         private void toolStripMenuItemCircle_Click(object sender, EventArgs e)
         {
             radioButtonCircle.Checked = true;
-            setCircleDimensions();
+            setShapeDimensions();
             panelDrawingArea.Invalidate();
         }
 
@@ -109,7 +114,7 @@ namespace ShapeCalculator
         private void toolStripMenuItemTriangle_Click(object sender, EventArgs e)
         {
             radioButtonTriangle.Checked = true;
-            setTriangleDimensions();
+            setShapeDimensions();
             panelDrawingArea.Invalidate();
         }
 
@@ -119,22 +124,25 @@ namespace ShapeCalculator
         {
             if (radioButtonSquare.Checked)
             {
-                setSquareDimensions();
-                setTextBoxValues(1);
+                setShapeDimensions();
+                setDrawDimensions();
+                setTextBoxValues();
                 panelDrawingArea.Invalidate();
             }
 
             if (radioButtonCircle.Checked)
             {
-                setCircleDimensions();
-                setTextBoxValues(2);
+                setShapeDimensions();
+                setDrawDimensions();
+                setTextBoxValues();
                 panelDrawingArea.Invalidate();
             }
 
             if (radioButtonTriangle.Checked)
             {
-                setTriangleDimensions();
-                setTextBoxValues(3);
+                setShapeDimensions();
+                setDrawDimensions();
+                setTextBoxValues();
                 panelDrawingArea.Invalidate();
             }
 
@@ -150,11 +158,11 @@ namespace ShapeCalculator
 
             if (radioButtonSquare.Checked)
             {
-                g.DrawRectangle(blackPen, xOrigin, yOrigin, squareDimension, squareDimension);
+                g.DrawRectangle(blackPen, xOrigin, yOrigin, drawDimension, drawDimension);
             }
             else if (radioButtonCircle.Checked)
             {
-                g.DrawEllipse(blackPen, xOrigin, yOrigin, circleDimension, circleDimension);
+                g.DrawEllipse(blackPen, xOrigin, yOrigin, drawDimension, drawDimension);
             }
             else if (radioButtonTriangle.Checked)
             {
@@ -168,36 +176,37 @@ namespace ShapeCalculator
             Application.Exit();
         }
 
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         // Displays a message box.
         private void toolStripMenuItemAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Group Members: John Francis Murphy, Daniel Murtagh" + "\n" + "Student Numbers: B00632566, B00630757");
+            Form aboutForm = new Form2();
+            aboutForm.Show();
         }
 
-        // Sets the square size variables to 2 times the current value of the slider value.
-        private void setSquareDimensions()
+        // Sets the shape size variables to 2 times the current value of the slider value
+        // so that the shape being drawn be will be able to fill the drawing area when at the
+        // maximum slider value.
+        private void setShapeDimensions()
         {
-            squareDimension = sliderDimension.Value;
+            shapeDimension = sliderDimension.Value;
         }
 
-        // Sets the square size variables to 2 times the current value of the slider value.
-        private void setCircleDimensions()
+        private void setDrawDimensions()
         {
-            circleDimension = sliderDimension.Value;
+            drawDimension = sliderDimension.Value * 2;
         }
-
-        // Sets the square size variables to 2 times the current value of the slider value.
-        private void setTriangleDimensions()
-        {
-            triangleDimension = sliderDimension.Value;
-        }
-
+        
         // Creates points that will be used in order to create the triangle shape.
         private Point[] trianglePoints()
         {
             Point point1 = new Point(xOrigin, yOrigin);
-            Point point2 = new Point(xOrigin, yOrigin + triangleDimension);
-            Point point3 = new Point(xOrigin + triangleDimension, yOrigin + triangleDimension);
+            Point point2 = new Point(xOrigin, yOrigin + drawDimension);
+            Point point3 = new Point(xOrigin + drawDimension, yOrigin + drawDimension);
             Point[] trianglePoints = { point1, point2, point3 };
 
             return trianglePoints;
@@ -205,114 +214,47 @@ namespace ShapeCalculator
 
         // Updates the contents of the boundary and area text boxes based on the string passed in
         // through the parameter list.
-        private void setTextBoxValues(int i)
+        private void setTextBoxValues()
         {
-            if (i == 1)
-            {
-                textBoxBoundaryResult.Text = squareBoundaryResult();
-                textBoxAreaResult.Text = squareAreaResult();
-            }
-            else if (i == 2)
-            {
-                textBoxBoundaryResult.Text = circleBoundaryResult();
-                textBoxAreaResult.Text = circleAreaResult();
-            }
-            else if (i == 3)
-            {
-                textBoxBoundaryResult.Text = triangleBoundaryResult();
-                textBoxAreaResult.Text = triangleAreaResult();
-            }
+            setBoundaryResult();
+            setAreaResult();
+            /*
+            textBoxBoundaryResult.Text = myShape.calculateBoundary(shapeDimension).ToString() + "cm";
+            textBoxAreaResult.Text = myShape.calculateArea(shapeDimension).ToString() + "cm^2";
+            */
+            textBoxSliderValue.Text = sliderDimension.Value.ToString() + "cm";
         }
 
-        
-        // Returns the value passed in through the parameter as a string formmatted to the
-        // appropriate decimal place.
-        private string setDecimalPlace(double d)
+        public void setBoundaryResult()
         {
-            double boundOrArea = d;
-            string stringValue = null;
-
             switch (decimalPlaces)
             {
                 case 1:
-                    stringValue = boundOrArea.ToString("#.##");
+                    textBoxBoundaryResult.Text = myShape.calculateBoundary(shapeDimension).ToString("#.##") + "cm";
                     break;
                 case 2:
-                    stringValue = boundOrArea.ToString("#.###");
+                    textBoxBoundaryResult.Text = myShape.calculateBoundary(shapeDimension).ToString("#.###") + "cm";
                     break;
                 case 3:
-                    stringValue = boundOrArea.ToString("#.####");
+                    textBoxBoundaryResult.Text = myShape.calculateBoundary(shapeDimension).ToString("#.####") + "cm";
                     break;
             }
-
-            return stringValue;
         }
 
-        /*
-        // Performs the calculation to find the boundary of the square.
-        private string squareBoundaryResult()
+        public void setAreaResult()
         {
-            double boundary;
-            string result;
-            boundary = squareDimension * 2;
-            result = setDecimalPlace(boundary);
-
-            return result;
+            switch (decimalPlaces)
+            {
+                case 1:
+                    textBoxAreaResult.Text = myShape.calculateArea(shapeDimension).ToString("#.##") + "cm^2";
+                    break;
+                case 2:
+                    textBoxAreaResult.Text = myShape.calculateArea(shapeDimension).ToString("#.###") + "cm^2";
+                    break;
+                case 3:
+                    textBoxAreaResult.Text = myShape.calculateArea(shapeDimension).ToString("#.####") + "cm^2";
+                    break;
+            }
         }
-
-        // Performs the calculation to find the area of the square.
-        private string squareAreaResult()
-        {
-            double area;
-            string result;
-            area = squareDimension * squareDimension;
-            result = setDecimalPlace(area);
-
-            return result;
-        }
-
-        // Performs the calculation to find the boundary of the circle.
-        private string circleBoundaryResult()
-        {
-            double boundary;
-            string result;
-            boundary = Math.PI * circleDimension;
-            result = setDecimalPlace(boundary);
-
-            return result;
-        }
-
-        // Performs the calculation to find the area of the circle.
-        private string circleAreaResult()
-        {
-            double area;
-            string result;
-            area = Math.PI * Math.Pow((circleHeight / 2), 2);
-            result = setDecimalPlace(area);
-            return result;
-        }
-
-        // Performs the calculation to find the boundary of the triangle.
-        private string triangleBoundaryResult()
-        {
-            double boundary;
-            string result;
-            boundary = (2 * triangleHeight) + (Math.Sqrt(2 * triangleHeight * triangleDimension));
-            result = setDecimalPlace(boundary);
-            return result;
-        }
-
-        // Performs the calculation to find the area of the triangle.
-        private string triangleAreaResult()
-        {
-            double area;
-            string result;
-            area = triangleDimension / 2 * triangleHeight;
-            result = setDecimalPlace(area);
-            return result;
-        }
-         * */
-
-        
     }
 }

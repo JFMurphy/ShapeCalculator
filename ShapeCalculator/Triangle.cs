@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShapeCalculator
 {
-    public abstract class Triangle : Shape
+    public class Triangle : Shape
     {
         private double boundary;
         private double area;
