@@ -1,0 +1,7 @@
+C:\Users\Danny\Documents\GitHub\ShapeCalculator\UnitTestProject\bin\Debug\UnitTestProject.dll
+C:\Users\Danny\Documents\GitHub\ShapeCalculator\UnitTestProject\bin\Debug\UnitTestProject.pdb
+C:\Users\Danny\Documents\GitHub\ShapeCalculator\UnitTestProject\bin\Debug\ShapeCalculator.exe
+C:\Users\Danny\Documents\GitHub\ShapeCalculator\UnitTestProject\bin\Debug\ShapeCalculator.pdb
+C:\Users\Danny\Documents\GitHub\ShapeCalculator\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\GitHub\ShapeCalculator\UnitTestProject\obj\Debug\UnitTestProject.dll
+C:\Users\Danny\Documents\GitHub\ShapeCalculator\UnitTestProject\obj\Debug\UnitTestProject.pdb
